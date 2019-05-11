@@ -1,0 +1,54 @@
+@import'variables';
+
+.card{
+    max-width: 600px;
+    background-color: $white;
+    min-height: 300px;
+    margin:0 auto;
+    margin-top:100px; text-align: center;
+}
+
+.container{
+    padding-bottom:20px;
+    margin-top:10px;
+    margin-bottom: 20px;
+    margin-left: 60px;
+    margin-right:60px;
+
+}
+
+.icon{
+    color:$dark-blue;
+    font-size: 60px;
+    margin-top: calc(0.10 * 80px);
+}
+
+.dot { margin-top:40px;
+    
+    height: 80px;
+    width: 80px;
+    border:3px solid $dark-blue;
+    border-radius: 50%;
+    display: inline-block;
+    
+  }
+
+  
+.title{
+    margin-top:40px;
+    font-family: $main-font;
+    color:$light-text;
+    font-weight: $bold-weight;
+    font-size: 26px;
+}
+
+.description{
+    text-align: justify;
+    margin-top:20px;
+    font-family:$main-font;
+    color:$light-text;
+    font-weight: $main-weight;
+    font-size: 18px;
+    line-height: 1.5;
+
+}

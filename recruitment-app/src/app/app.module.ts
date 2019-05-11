@@ -4,9 +4,11 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './layout/header/header.component';
-import { HomeComponent } from './items/home.component';
-import { CardComponent } from './items/card/card.component';
-import { CardDetailsComponent } from './items/card-details/card-details.component';
+import { HomeComponent } from './home/home.component';
+import { CardComponent } from './home/card/card.component';
+import { CardDetailsComponent } from './home/card-details/card-details.component';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { CardDetailsComponent } from './items/card-details/card-details.componen
     HeaderComponent,
     HomeComponent,
     CardComponent,
-    CardDetailsComponent
+    CardDetailsComponent,
+    AboutComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
