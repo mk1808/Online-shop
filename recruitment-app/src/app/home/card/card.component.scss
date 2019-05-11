@@ -1,0 +1,44 @@
+@import'variables';
+
+.card{
+    width:220px;
+    height:300px;
+    background-color: $search;
+    margin-right:12px;
+    margin-left:12px;
+    cursor: pointer;
+    margin-bottom:20px;
+
+}
+
+.title{
+    font-family: $main-font;
+    color:$dark-text;
+    font-weight: $bold-weight;
+    font-size: 18px;
+}
+
+.cardContainer{
+    margin-left: 10px;
+    margin-right:10px;
+    margin-top:15px;
+}
+
+.description{
+    margin-top:10px;
+    font-family:$main-font;
+    color:$light-text;
+    font-weight: $main-weight;
+    font-size: 12px;
+  
+}
+
+.cartSmall{
+    font-size: 11px;
+    padding-top:15px;
+    padding-bottom:20px;
+    font-weight: 300;
+    font-family: Lato;
+    line-height: 1.5;
+
+}

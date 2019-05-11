@@ -1,0 +1,56 @@
+@import'variables';
+
+.card{
+    width:100%;
+    min-height:400px;
+    background-color: $light-blue;  
+    color:$white;
+}
+
+.title{
+    font-family: Roboto;
+   // color:$dark-text;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.cardContainer{
+    margin-left: 40px;
+    margin-right:40px;
+    margin-top:30px;
+    margin-bottom:30px;
+    
+}
+
+.description{
+    margin-top:10px;
+    font-family: Roboto;
+   // color:$light-text;
+    font-weight: 300;
+    font-size: 12px;
+    max-width:500px;
+    line-height: 1.5;
+}
+
+.button{
+    margin-right:20px;
+    float: right;
+    background-color:$accent;
+	//display:inline-block;
+	cursor:pointer;
+	color:$white;
+	//font-family:Arial;
+	//font-size:17px;
+	padding:16px 31px;
+    text-decoration:none;
+    font-family: Roboto;
+   // color:$dark-text;
+    font-weight: 500;
+}
+.buttonContainer{
+    float: right;;
+}
+
+.button:hover {
+	
+}

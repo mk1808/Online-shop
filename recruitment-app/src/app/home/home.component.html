@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="cart">
+    <div class="cartContainer">
+ 
+ <i class="material-icons">
+        perm_contact_calendar
+        </i>
+      
+      <span>
+     Contact </span>
+  
+  <div class="cartSmall">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+      Aliquam finibus placerat ex, ut mattis metus tincidunt vitae. 
+      Suspendisse a nisl tempus, gravida nibh eu, vulputate tellus. 
+      Vivamus eget malesuada diam, at ultrices est. 
+      </div>
+
+      <i class="material-icons">
+          shopping_cart
+          </i>
+     <span>
+        Cart </span>
+      <div class="itemsArea">
+        <span id="emptyCart">Cart is empty</span>
+      </div>
+      </div>
+  </div>
+  <div class="content items" *ngIf="manyItems"  >
+    <app-card *ngFor="let item of items" class="singleCard" (click)="onItem()" ></app-card>
+
+  </div>
+  <div class="content single" *ngIf="!manyItems">
+    <app-card-details></app-card-details>
+
+  </div>
+
+</div>
