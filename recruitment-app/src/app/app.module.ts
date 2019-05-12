@@ -5,20 +5,24 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { HomeComponent } from './home/home.component';
-import { CardComponent } from './home/card/card.component';
-import { CardDetailsComponent } from './home/card-details/card-details.component';
+import { ProductCardComponent } from './home/product-card/product-card.component';
+import { ProductDetailsComponent } from './home/product-details/product-details.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
+import { CartComponent } from './home/cart/cart.component';
+import { DetailsComponent } from './home/details/details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    CardComponent,
-    CardDetailsComponent,
+    ProductCardComponent,
+    ProductDetailsComponent,
     AboutComponent,
-    ContactComponent
+    ContactComponent,
+    CartComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,

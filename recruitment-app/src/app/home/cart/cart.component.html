@@ -1,0 +1,34 @@
+<div class="cart">
+  <div class="cartContainer">
+
+<i class="material-icons">
+      perm_contact_calendar
+      </i>
+    
+    <span>
+   Contact </span>
+
+<div class="cartSmall">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+    Aliquam finibus placerat ex, ut mattis metus tincidunt vitae. 
+    Suspendisse a nisl tempus, gravida nibh eu, vulputate tellus. 
+    Vivamus eget malesuada diam, at ultrices est. 
+    </div>
+
+    <i class="material-icons">
+        shopping_cart
+        </i>
+   <span>
+      Cart <span *ngIf="!empty">({{numberOfItems}})</span>
+    </span>
+    <div class="itemsArea"[ngClass]="{'emptyC':empty}">
+
+      <span *ngIf="empty"  id="emptyCart">Cart is empty</span>
+
+      
+      <div *ngIf="empty==false" class="full">
+        <div class="singleProduct"*ngFor="let prod of products"> {{prod.name}}</div>
+      </div>
+    </div>
+    </div>
+</div>
