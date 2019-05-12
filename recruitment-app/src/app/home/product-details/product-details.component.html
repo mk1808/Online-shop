@@ -14,7 +14,7 @@
     </div>
   </div>
     <div class="buttonContainer">
-      <a  class="button"(click)="addItem()">Add to cart</a>
+      <a class="button" [ngClass]="{'disabled':!active}"(click)="addItem()">Add to cart</a>
     </div>
   </div>
   </div>

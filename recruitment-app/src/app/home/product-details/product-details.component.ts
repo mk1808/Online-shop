@@ -12,6 +12,8 @@ import { ApiService } from 'src/shared/api.service';
 export class ProductDetailsComponent implements OnInit {
 product:Product=new Product();
 id:number;
+active:boolean=true;
+products:Product[]=[];
   constructor(private router: Router, private route: ActivatedRoute, public service: AppService,
     public api: ApiService) { }
 
@@ -22,16 +24,24 @@ id:number;
       console.log(x);
       this.api.getProduct(this.id).subscribe(y=>{
         this.product=y;
-console.log(this.product);
+
+
+this.active=!this.service.findElementInCart(this.product);
+  //  console.log(this.active);
       })
       // x.id getprodbyid
     }
     );
 
+  //  this.products=this.service.getProducts();
+    
+
+
   }
 
 addItem(){
-  this.service.addItemToCart(this.product);
-
+  if(this.active)this.service.addItemToCart(this.product);
+  
+  this.active=false;
 }
 }

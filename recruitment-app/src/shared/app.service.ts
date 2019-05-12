@@ -32,13 +32,16 @@ export class AppService {
     this.eventSourceName.next(name);
   }
 
-  displayDetails(item){
-    //this.eventSource.next();
+  findElementInCart(product:Product):boolean{
+    let found=false;
+    this.products.forEach(x=>
+      { console.log(x,product);
+        if(x.id==product.id) {console.log("true"); found=true; }
+        
+      });
+      return found;
   }
 
-  openProductDetails(product){
-    //this.eventSource.next();
-  }
 
 
 
