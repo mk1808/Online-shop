@@ -13,6 +13,9 @@ import { CartComponent } from './home/cart/cart.component';
 import { DetailsComponent } from './home/details/details.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CookieService } from 'ngx-cookie-service';
+import { ReactiveFormsModule } from '@angular/forms';
+import { NgxSpinnerModule } from 'ngx-spinner';
+
 
 @NgModule({
   declarations: [
@@ -24,12 +27,15 @@ import { CookieService } from 'ngx-cookie-service';
     AboutComponent,
     ContactComponent,
     CartComponent,
-    DetailsComponent
+    DetailsComponent,
+
   ],
   imports: [    
     HttpClientModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    NgxSpinnerModule
   ],
   providers: [CookieService],
   bootstrap: [AppComponent]

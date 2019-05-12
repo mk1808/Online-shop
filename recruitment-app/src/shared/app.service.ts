@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
 import { Product } from './api';
+import { strictEqual } from 'assert';
 
 @Injectable({
   providedIn: 'root'
@@ -8,6 +9,10 @@ import { Product } from './api';
 export class AppService {
   private eventSource=new Subject<Product>();
   public eventEmitter=this.eventSource.asObservable();
+
+  private eventSourceName=new Subject<string>();
+  public eventEmitterName=this.eventSourceName.asObservable();
+  
   private products:Product[]=[];
   constructor() { }
 
@@ -21,6 +26,10 @@ export class AppService {
     this.eventSource.next();
     this.products.push(product);
     console.log(this.products);
+  }
+
+  sendSerchItem(name:string){
+    this.eventSourceName.next(name);
   }
 
   displayDetails(item){
