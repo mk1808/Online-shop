@@ -1,9 +1,9 @@
 <div class="card" (click)="onItem()">
-  <img src="assets/indeks.jpg" width="100%" height="220px">
+  <img src="{{id.photo}}" width="100%" height="220px">
  <div class="cardContainer">
   <div class="title">
-    Title {{id}}
+     {{id.name}}
   </div>
-  <div class="description"> Description</div>
+  <div class="description"> {{id.shortDesc}}</div>
 </div>
 </div>

@@ -20,7 +20,7 @@ export class ProductCardComponent implements OnInit {
   onItem(){
     //this.service.displayDetails(item);
 
-    this.router.navigate(['/home/'+this.id], { relativeTo: this.route });
+    this.router.navigate(['/home/'+this.id.id], { relativeTo: this.route });
     
     
   }

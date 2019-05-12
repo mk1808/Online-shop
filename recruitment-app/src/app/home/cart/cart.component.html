@@ -26,7 +26,7 @@
       <span *ngIf="empty"  id="emptyCart">Cart is empty</span>
 
       
-      <div *ngIf="empty==false" class="full">
+      <div *ngIf="!empty" class="full">
         <div class="singleProduct"*ngFor="let prod of products"> {{prod.name}}</div>
       </div>
     </div>

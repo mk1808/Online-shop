@@ -2,7 +2,7 @@
 
 .card{
     width:100%;
-    min-height:400px;
+    min-height:600px;
     background-color: $light-blue;  
     color:$white;
 }
@@ -53,4 +53,20 @@
 
 .button:hover {
 	
+}
+
+.image{
+    height:420px;
+    overflow: hidden;
+ 
+}
+
+.background{
+    width:100%;
+    
+}
+
+.image img{
+    position: relative;
+    top:-40%;
 }

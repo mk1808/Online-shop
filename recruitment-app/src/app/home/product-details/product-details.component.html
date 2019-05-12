@@ -1,22 +1,20 @@
 <div class="card">
-    <img src="assets/indeks.jpg" width="100%" height="220px">
+  <div class="image">
+  <!--  <div class="background" style="background-image: {{product.photo}}"></div>-->
+    <img src="{{product.photo}}" width="100%" >
+  </div>
    <div class="cardContainer">
     <div style="float: left;">
     <div class="title" style="width:60%">
-      Title
+      {{product.name}}
     </div>
     <div class="description"> 
 
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-        Aliquam finibus placerat ex, ut mattis metus tincidunt vitae. 
-        Suspendisse a nisl tempus, gravida nibh eu, vulputate tellus. 
-        Vivamus eget malesuada diam, at ultrices est.ulputate tellus. 
-        Vivamus eget malesuada diam, at ultrices est.ulputate tellus. 
-        Vivamus eget malesuada diam, at ultrices est.
+       {{product.longDesc}}
     </div>
   </div>
     <div class="buttonContainer">
-      <a  class="button"(click)="addItem()">Add to card</a>
+      <a  class="button"(click)="addItem()">Add to cart</a>
     </div>
   </div>
   </div>

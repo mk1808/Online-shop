@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AppService } from 'src/shared/app.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Product } from 'src/shared/api';
+import { ApiService } from 'src/shared/api.service';
 
 @Component({
   selector: 'app-product-details',
@@ -10,16 +11,19 @@ import { Product } from 'src/shared/api';
 })
 export class ProductDetailsComponent implements OnInit {
 product:Product=new Product();
-  constructor(private router: Router, private route: ActivatedRoute, public service: AppService) { }
+id:number;
+  constructor(private router: Router, private route: ActivatedRoute, public service: AppService,
+    public api: ApiService) { }
 
   ngOnInit() {
-    this.product.id=1;
-    this.product.price=2;
-    this.product.name="pord1";
-    this.product.longDesc="llllllllllllld";
-    this.product.shortDesc="sd";
+    
     this.route.params.subscribe(x =>{
-      
+      this.id=x.id;
+      console.log(x);
+      this.api.getProduct(this.id).subscribe(y=>{
+        this.product=y;
+console.log(this.product);
+      })
       // x.id getprodbyid
     }
     );

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { AppService } from 'src/shared/app.service';
+import { ApiService } from 'src/shared/api.service';
+import { Product } from 'src/shared/api';
 
 @Component({
   selector: 'app-home',
@@ -10,11 +12,15 @@ import { AppService } from 'src/shared/app.service';
 export class HomeComponent implements OnInit {
 manyItems:boolean=true;
 id=1;
-items:any[]=[1,2,3,4,5];
-  constructor(private router: Router, private route: ActivatedRoute,public service: AppService) { }
+items:Product[]=[];
+  constructor(private router: Router, private route: ActivatedRoute,public service: AppService,
+    public apiService:ApiService) { }
 
   ngOnInit() {
-    
+    this.apiService.getProducts().subscribe(x=>{
+      console.log(x);
+      this.items=x;
+    })
    
   }
   onItem(item){

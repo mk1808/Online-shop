@@ -11,6 +11,8 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { CartComponent } from './home/cart/cart.component';
 import { DetailsComponent } from './home/details/details.component';
+import { HttpClientModule } from '@angular/common/http';
+import { CookieService } from 'ngx-cookie-service';
 
 @NgModule({
   declarations: [
@@ -24,11 +26,12 @@ import { DetailsComponent } from './home/details/details.component';
     CartComponent,
     DetailsComponent
   ],
-  imports: [
+  imports: [    
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
