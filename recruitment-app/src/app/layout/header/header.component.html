@@ -1,8 +1,8 @@
 <div class="header topnav">
-  <div class="logo">
+  <div class="logo" (click)="onLogo()">
     <h1>LOGO </h1>
   </div>
-
+  
   <ul class="list">
     <li class="listItem"
     routerLink="/home" 
@@ -14,11 +14,18 @@
     <li
     routerLink="/contact" 
     routerLinkActive="active"> Contact</li>
-    <li class="search">
-      <i class="material-icons">
+ 
+     <li class="search" (click)="searchProduct()">
+      <i class="material-icons" >
         search
       </i>
-    </li>
+    </li> 
+   
+    <li class="search" *ngIf="searchInput">
+        <input  [formControl]="searchText" type="text" id="fname" name="fname" 
+        (keyup.enter)="onSearch()">
+      </li>
+ 
   </ul>
 
 

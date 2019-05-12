@@ -42,3 +42,8 @@
     line-height: 1.5;
 
 }
+@media only screen and (max-width: 610px) {
+    .card{width: 100%;
+    margin-left:0;
+margin-right: 0; }
+}

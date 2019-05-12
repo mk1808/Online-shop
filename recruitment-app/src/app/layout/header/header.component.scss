@@ -39,6 +39,7 @@ h1{
 .logo{
   width:30%;
   float:left;
+  cursor: pointer;
 }
 
 .list{
@@ -61,3 +62,21 @@ li{
 
 
 li:focus, :active { outline: none!important; }
+
+input {
+  width: 200px;
+  padding: 8px 12px;
+
+  box-sizing: border-box;
+  margin: -15px 0;
+}
+
+
+
+
+@media only screen and (max-width: 500px) {
+    .logo{float:none;}
+    .header{
+     height: fit-content; 
+    }
+}

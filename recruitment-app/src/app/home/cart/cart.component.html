@@ -27,7 +27,8 @@
 
       
       <div *ngIf="!empty" class="full">
-        <div class="singleProduct"*ngFor="let prod of products"> {{prod.name}}</div>
+        <div class="singleProduct"*ngFor="let prod of products"> <span class="price">
+          {{prod.price}} </span> {{prod.name}} </div>
       </div>
     </div>
     </div>

@@ -104,3 +104,23 @@
     padding-left: 10px;
 
 }
+
+.price{
+    color:$accent;
+    
+}
+
+@media only screen and (max-width: 610px) {
+    .cart{
+        float:none;
+        width:100%
+    }
+
+    .cartContainer{
+        height:fit-content;
+    }
+
+    .singleProduct{
+        max-width: 90%;
+    }
+}

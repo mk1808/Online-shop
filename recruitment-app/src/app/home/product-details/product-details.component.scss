@@ -5,6 +5,7 @@
     min-height:600px;
     background-color: $light-blue;  
     color:$white;
+    display: grid;
 }
 
 .title{
@@ -69,4 +70,20 @@
 .image img{
     position: relative;
     top:-40%;
+}
+
+
+@media only screen and (max-width: 1170px) {
+     .image img{
+        
+        top:0;
+    }
+    .description{
+        max-width: none;
+        margin-bottom: 20px;
+    }
+
+    .image{
+        height: fit-content;
+    }
 }

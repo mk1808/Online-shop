@@ -77,3 +77,9 @@
     float:left;
     width:fit-content;
 }
+
+@media only screen and (max-width: 610px) {
+    .content{
+        width:100%;
+    }
+}
