@@ -42,13 +42,7 @@ serchText:string;
     });
    
   }
-  onItem(item){
-    this.service.displayDetails(item);
 
-    //this.router.navigate(['/home/'+this.id], { relativeTo: this.route });
-    
-    
-  }
 
   private _filterItems(value: any): Product[] {
     if (!(value instanceof Object)) {
