@@ -8,11 +8,11 @@ import { Observable } from 'rxjs';
 export class RestService {
 
   constructor(private http: HttpClient) {
-   }
+  }
 
-   get<T>(url:string):Observable<T>{
-   
+  get<T>(url: string): Observable<T> {
+
 
     return this.http.get<T>(url);
-}
+  }
 }
