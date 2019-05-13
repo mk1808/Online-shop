@@ -11,36 +11,34 @@ import { NgxSpinnerService } from 'ngx-spinner';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-manyItems:boolean=true;
-id=1;
-items:Product[]=[];
-allItems:Product[]=[];
-serchText:string;
-  constructor(private router: Router, private route: ActivatedRoute,public service: AppService,
-    public apiService:ApiService,private spinner: NgxSpinnerService) { }
+  manyItems: boolean = true;
+  id = 1;
+  items: Product[] = [];
+  allItems: Product[] = [];
+  serchText: string;
+  constructor(private router: Router, private route: ActivatedRoute, public service: AppService,
+    public apiService: ApiService, private spinner: NgxSpinnerService) { }
 
   ngOnInit() {
-      
-      this.spinner.show();
- 
-      setTimeout(() => {
-          
-          this.spinner.hide();
-      }, 2000);
-    
-    this.apiService.getProducts().subscribe(x=>{
-      console.log(x);
-      this.allItems=x;
-      this.items=x;
+
+    this.spinner.show();
+
+    setTimeout(() => {
+
+      this.spinner.hide();
+    }, 2000);
+
+    this.apiService.getProducts().subscribe(x => {
+      this.allItems = x;
+      this.items = x;
     });
 
-    this.service.eventEmitterName.subscribe(x=>{
-      console.log(x);
-      this.serchText=x;
-      this.items=this._filterItems(this.serchText);
+    this.service.eventEmitterName.subscribe(x => {
+      this.serchText = x;
+      this.items = this._filterItems(this.serchText);
 
     });
-   
+
   }
 
 
@@ -52,7 +50,7 @@ serchText:string;
         item => item.name.toLowerCase().indexOf(filterValue) >= 0
       );
     }
-    return this.items ;
+    return this.items;
   }
 
 

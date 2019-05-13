@@ -9,19 +9,15 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class ProductCardComponent implements OnInit {
   @Input() id;
-  constructor(public service:AppService,private router: Router, private route: ActivatedRoute) { }
+  constructor(public service: AppService, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    
- //   console.log(this.id);
-
   }
 
-  onItem(){
-    //this.service.displayDetails(item);
+  onItem() {
 
-    this.router.navigate(['/home/'+this.id.id], { relativeTo: this.route });
-    
-    
+    this.router.navigate(['/home/' + this.id.id], { relativeTo: this.route });
+
+
   }
 }

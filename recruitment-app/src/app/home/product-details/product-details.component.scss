@@ -10,7 +10,6 @@
 
 .title{
     font-family: Roboto;
-   // color:$dark-text;
     font-weight: 500;
     font-size: 18px;
 }
@@ -26,7 +25,6 @@
 .description{
     margin-top:10px;
     font-family: Roboto;
-   // color:$light-text;
     font-weight: 300;
     font-size: 12px;
     max-width:500px;
@@ -37,15 +35,11 @@
     margin-right:20px;
     float: right;
     background-color:$accent;
-	//display:inline-block;
 	cursor:pointer;
 	color:$white;
-	//font-family:Arial;
-	//font-size:17px;
 	padding:16px 31px;
     text-decoration:none;
     font-family: Roboto;
-   // color:$dark-text;
     font-weight: 500;
 }
 .buttonContainer{

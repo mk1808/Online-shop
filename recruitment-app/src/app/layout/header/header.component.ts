@@ -9,27 +9,25 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-searchInput:boolean=false;
-searchText = new FormControl('');
-constructor(public service: AppService,private router: Router, private route: ActivatedRoute) { }
+  searchInput: boolean = false;
+  searchText = new FormControl('');
+  constructor(public service: AppService, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
-  
+
 
   }
 
-  searchProduct(){
-    if(window.innerWidth>800)
-    this.searchInput=!this.searchInput;
+  searchProduct() {
+    if (window.innerWidth > 800)
+      this.searchInput = !this.searchInput;
   }
 
-  onSearch(){
-
-    console.log(this.searchText.value);
+  onSearch() {
     this.service.sendSerchItem(this.searchText.value);
   }
 
-  onLogo(){
-      this.router.navigate(['/home']);
+  onLogo() {
+    this.router.navigate(['/home']);
   }
 }

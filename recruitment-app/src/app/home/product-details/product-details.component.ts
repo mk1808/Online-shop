@@ -10,38 +10,32 @@ import { ApiService } from 'src/shared/api.service';
   styleUrls: ['./product-details.component.scss']
 })
 export class ProductDetailsComponent implements OnInit {
-product:Product=new Product();
-id:number;
-active:boolean=true;
-products:Product[]=[];
+  product: Product = new Product();
+  id: number;
+  active: boolean = true;
+  products: Product[] = [];
   constructor(private router: Router, private route: ActivatedRoute, public service: AppService,
     public api: ApiService) { }
 
   ngOnInit() {
-    
-    this.route.params.subscribe(x =>{
-      this.id=x.id;
-      console.log(x);
-      this.api.getProduct(this.id).subscribe(y=>{
-        this.product=y;
+
+    this.route.params.subscribe(x => {
+      this.id = x.id;
+      this.api.getProduct(this.id).subscribe(y => {
+        this.product = y;
 
 
-this.active=!this.service.findElementInCart(this.product);
-  //  console.log(this.active);
+        this.active = !this.service.findElementInCart(this.product);
       })
-      // x.id getprodbyid
+
     }
     );
 
-  //  this.products=this.service.getProducts();
-    
-
-
   }
 
-addItem(){
-  if(this.active)this.service.addItemToCart(this.product);
-  
-  this.active=false;
-}
+  addItem() {
+    if (this.active) this.service.addItemToCart(this.product);
+
+    this.active = false;
+  }
 }
